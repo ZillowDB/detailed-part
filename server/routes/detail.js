@@ -1,10 +1,10 @@
 const express = require('express');
 
 const router = express.Router();
-const Detail = require('../../db/Detail.js');
+const Detail = require('../../db/detail.js');
 
 // get detail info for all houses
-router.get('/homes/all', (req, res) => {
+router.get('/homes', (req, res) => {
   Detail.find({})
     .then(data => res.status(200).send(data))
     .catch(error => res.status(500).send(error));
