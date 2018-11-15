@@ -38,6 +38,7 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "css-loader": "^1.0.1",
+    "csv-stringify": "^4.3.1",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
