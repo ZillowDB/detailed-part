@@ -79,7 +79,8 @@ class Aside extends React.Component {
 		if(!this.state.nameBool || !this.state.phoneBool || !this.state.mailBool){
 			alert('Wrong Format!')
 		} else {
-			axios.post('/api/user-request', {data})
+			//todo get home id from window.location
+			axios.post('/userRequest/homes/1', {data})
 				.then(res => {
 					this.sendReqOkData(res.data);
 				})

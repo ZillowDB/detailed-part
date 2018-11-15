@@ -1,4 +1,4 @@
-const Detail = require('./Detail.js');
+const Detail = require('./detail.js');
 
 const dropAll = function() {
   return Detail.remove({});

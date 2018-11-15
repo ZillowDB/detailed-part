@@ -3,3 +3,7 @@ config.js
 bundle.js
 style.css
 coverage
+
+## secrets
+.env
+*.pem

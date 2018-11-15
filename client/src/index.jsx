@@ -62,7 +62,7 @@ class App extends React.Component {
   }
 
   getOne(index){
-    fetch(`/api/homes/${index}/detail-information`)
+    fetch(`/detail/homes/${index}`)
       .then(res => res.json())
       .then(json => {
         this.setState({
