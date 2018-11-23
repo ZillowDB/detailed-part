@@ -3,6 +3,7 @@ config.js
 bundle.js
 style.css
 coverage
+data2.tsv
 
 ## secrets
 .env
