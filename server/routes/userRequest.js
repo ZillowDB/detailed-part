@@ -1,7 +1,8 @@
 const express = require('express');
+const cass = require('../index.js');
 
 const router = express.Router();
-const UserRequest = require('../../db/userRequest.js');
+// const UserRequest = require('../../db/userRequest.js');
 
 // get a single user request
 router.get('/homes/:home', (req, res) => {

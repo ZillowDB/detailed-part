@@ -65,13 +65,15 @@ class App extends React.Component {
     fetch(`/detail/homes/${index}`)
       .then(res => res.json())
       .then(json => {
+        console.log(json);
         this.setState({
-          data: json
+          data: json.rows[0]
         })
       })
   }
 
   render(){
+    console.log(this.state.data);
     let style = {
       opacity: this.state.opacity
     }

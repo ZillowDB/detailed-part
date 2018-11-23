@@ -6,8 +6,8 @@ import FollowDetails from './FollowDetails.jsx';
 const FollowingContents = ({data}) => (
   <div>
   	<div className="following-contents">
-        <FollowFact factsAndFeatures = {data}/>
-        <FollowDetails details = {data}/>
+        <FollowFact data = {data}/>
+        <FollowDetails data = {data}/>
     </div>
   </div>
 )
