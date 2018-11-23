@@ -12,11 +12,11 @@ const ExteriorFeatures = ({data}) => (
                         <div className="label">Lot</div>
                         <div className="body">
                             <span className="detail-module-title">lot: </span>
-                            {data.lot.lot}
+                            {data.lot}
                         </div>
                         <div className="body">
                             <span className="detail-module-title">Lot Width: </span>
-                            {data.lot.lotWidth}
+                            {data.lotwidth}
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const ExteriorFeatures = ({data}) => (
                         <div className="label">Other Exterior Features</div>
                         <div className="body">
                             <span className="detail-module-title">Parcel #: </span>
-                            {data.other}
+                            {data.otherexterior}
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ const Parking = ({data}) => (
                     <div className="module-text">
                         <div className="body">
                             <span className="detail-module-title">Parking: </span>
-                            {data}
+                            {data.parkinglong}
                         </div>
                     </div>
                 </div>

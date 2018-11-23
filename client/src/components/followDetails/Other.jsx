@@ -12,11 +12,11 @@ const Other = ({data}) => (
                 <div className="module-text">
                     <div className="body">
                         <span className="detail-module-title">Last sold: </span>
-                        {moment(data.lastSold.soldDate).fromNow()}
+                        {moment(data.solddate).fromNow()}
                     </div>
                     <div className="body">
                         <span className="detail-module-title">Price/sqft: </span>
-                        {data.lastSold.soldPrice.toLocaleString()}
+                        {data.soldprice.toLocaleString()}
                     </div>
                 </div>
             </div>

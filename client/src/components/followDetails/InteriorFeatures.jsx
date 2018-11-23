@@ -12,7 +12,7 @@ const InteriorFeatures = ({data}) => (
                     <div className="label">Bedsrooms</div>
                     <div className="body">
                         <span className="detail-module-title">Beds: </span>
-                        {data.bedRoom}
+                        {data.bedroom}
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@ const InteriorFeatures = ({data}) => (
                     <div className="label">Bathrooms</div>
                     <div className="body">
                         <span className="detail-module-title">Baths: </span>
-                        {data.bathRoom}
+                        {data.bathroom}
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@ const InteriorFeatures = ({data}) => (
                     <div className="label">Other Interior Features</div>
                     <div className="body">
                         <span className="detail-module-title">Addition size: </span>
-                        {data.other}
+                        {data.otherinterior}
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@ const InteriorFeatures = ({data}) => (
                     <div className="label">Heating and Cooling</div>
                     <div className="body">
                         <span className="detail-module-title">Heating: </span>
-                        {data.heatingAndCooling}
+                        {data.heatingandcooling}
                     </div>
                 </div>
             </div>

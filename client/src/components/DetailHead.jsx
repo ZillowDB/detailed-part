@@ -24,7 +24,7 @@ class DetailHead extends React.Component {
                 <div className="detail head">
                     <div className="title zlw-lg-2-3 zlw-sm-2-2">
                         <div className="main-title title">{this.props.data.address}</div>
-                        <div className="sub-title title">{this.props.data.subTitle}</div>
+                        <div className="sub-title title">{this.props.data.subtitle}</div>
                     </div>
                     <div className="floater zlw-lg-1-3 zlw-sm-2-2">
                         <div className="price-area">

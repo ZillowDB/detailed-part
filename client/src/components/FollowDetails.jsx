@@ -8,41 +8,41 @@ import Other from './followDetails/Other.jsx';
 import ActivityOnZillow from './followDetails/ActivityOnZillow.jsx';
 
 
-const FollowDetails = ({details}) => (
+const FollowDetails = ({data}) => (
 		<div>
 			<div className="follow-details">
 	        <div className="details">
-	        	<InteriorFeatures data = {details.interiorFeatures}/>
+	        	<InteriorFeatures data = {data}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<SpaceAndAmenities data = {details.spacesAndMenities}/>
+	        	<SpaceAndAmenities data = {data}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<Construction data = {details.construction}/>
+	        	<Construction data = {data}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<ExteriorFeatures data = {details.exteriorFeatures}/>
+	        	<ExteriorFeatures data = {data}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<Parking data = {details.parking}/>
+	        	<Parking data = {data}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<Other data = {details.other}/>
+	        	<Other data = {data}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<ActivityOnZillow data = {details.activityOnZillow}/>
+	        	<ActivityOnZillow data = {data}/>
 	        </div>
 	    </div>
     </div>
