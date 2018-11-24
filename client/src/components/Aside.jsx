@@ -80,7 +80,7 @@ class Aside extends React.Component {
 			alert('Wrong Format!')
 		} else {
 			//todo get home id from window.location
-			axios.post('/userRequest/homes/1', {data})
+			axios.post('/api/homes/1/userRequests', {data})
 				.then(res => {
 					this.sendReqOkData(res.data);
 				})

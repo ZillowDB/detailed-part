@@ -25,8 +25,12 @@ class App extends React.Component {
 	}
 
   componentDidMount(){
-    let idx = Math.floor(Math.random() * (101 - 1)) + 1;
-    this.getOne(idx);
+    let idx = window.location.pathname.split('/')[2];
+    if (idx.includes('-')){
+      this.getByAddress(idx);
+    } else {
+      this.getById(idx);
+    }
   }
 
   showCal(){
@@ -61,19 +65,27 @@ class App extends React.Component {
     })
   }
 
-  getOne(index){
-    fetch(`/detail/homes/${index}`)
+  getById(index){
+    fetch(`/api/homes/${index}/details`)
       .then(res => res.json())
       .then(json => {
-        console.log(json);
         this.setState({
           data: json.rows[0]
-        })
-      })
+        });
+      });
+  }
+
+  getByAddress(address){
+    fetch(`/api/addresses/${address}/details`)
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+          data: json.rows[0]
+        });
+      }); 
   }
 
   render(){
-    console.log(this.state.data);
     let style = {
       opacity: this.state.opacity
     }
