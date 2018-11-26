@@ -4,6 +4,7 @@ bundle.js
 style.css
 coverage
 data2.tsv
+newrelic.js
 
 ## secrets
 .env

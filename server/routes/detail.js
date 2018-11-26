@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const cassandra = require('cassandra-driver');
 
-const client = new cassandra.Client({ contactPoints: ['127.0.0.1'], keyspace: 'sdc' });
+const client = new cassandra.Client({ contactPoints: [process.env.CP], keyspace: process.env.KEY });
 const router = express.Router();
 
 const idQuery = 'SELECT * FROM detailid WHERE id=?';
