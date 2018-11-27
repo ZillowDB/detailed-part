@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import FollowFact from './FollowFact.jsx';
 import FollowDetails from './FollowDetails.jsx';
 
-const FollowingContents = ({data}) => (
+const FollowingContents = ({homeInfo}) => (
   <div>
   	<div className="following-contents">
-        <FollowFact data = {data}/>
-        <FollowDetails data = {data}/>
+        <FollowFact homeInfo = {homeInfo}/>
+        <FollowDetails homeInfo = {homeInfo}/>
     </div>
   </div>
 )

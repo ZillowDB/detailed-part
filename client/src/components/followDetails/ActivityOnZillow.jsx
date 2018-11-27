@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const ActivityOnZillow = ({data}) => (
+const ActivityOnZillow = (props) => (
 	<div>
 		<div className="detail-title">
         Activity On Zillow
@@ -12,14 +12,14 @@ const ActivityOnZillow = ({data}) => (
                 <div className="module-text">
                     <div className="body">
                         <span className="detail-module-title">Days on Zillow: </span>
-                        {moment(data.daysonzillow).fromNow()}
+                        {moment(props.days).fromNow()}
                     </div>
                     <div className="body">
                         <span className="detail-module-title">Views in the past 30 days: </span>
-                        {data.pastthirtydayview}
+                        {props.pastthirty}
                     </div>
                     <div className="body">
-                        {data.savedlog} shoppers saved this home
+                        {props.savedlog} shoppers saved this home
                     </div>
                 </div>
             </div>

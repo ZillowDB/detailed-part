@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const FollowFact = ({data}) => (
+const FollowFact = ({homeInfo}) => (
 	<div>
 		<div className="follow-fact">
         <div className="features">
@@ -13,8 +13,8 @@ const FollowFact = ({data}) => (
                             <i className="far fa-building"></i>
                         </div>
                         <div className="module-text">
-                            <div className="label">type</div>
-                            <div className="body">{data.type}</div>
+                            <div className="label">Type</div>
+                            <div className="body">{homeInfo.type}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -23,7 +23,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Year Built</div>
-                            <div className="body">{moment(data.yearbuilt).fromNow()}</div>
+                            <div className="body">{moment(homeInfo.yearbuilt).fromNow()}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -32,7 +32,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Heating</div>
-                            <div className="body">{data.heating}</div>
+                            <div className="body">{homeInfo.heating}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -41,7 +41,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Cooling</div>
-                            <div className="body">{data.cooling}</div>
+                            <div className="body">{homeInfo.cooling}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -50,7 +50,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Parking</div>
-                            <div className="body">{data.parking}</div>
+                            <div className="body">{homeInfo.parking}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -59,7 +59,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Lot</div>
-                            <div className="body">{data.lot}</div>
+                            <div className="body">{homeInfo.lot}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -68,7 +68,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Days on Zillow</div>
-                            <div className="body">{moment(data.daysonzillow).fromNow()}</div>
+                            <div className="body">{moment(homeInfo.daysonzillow).fromNow()}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -77,7 +77,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Price/sqft</div>
-                            <div className="body">{data.pricepersqft}</div>
+                            <div className="body">{homeInfo.pricepersqft}</div>
                         </div>
                     </div>
                     <div className="feature-module zlw-lg-1-3 zlw-sm-1-2">
@@ -86,7 +86,7 @@ const FollowFact = ({data}) => (
                         </div>
                         <div className="module-text">
                             <div className="label">Saves</div>
-                            <div className="body">{data.saves}</div>
+                            <div className="body">{homeInfo.saves}</div>
                         </div>
                     </div>
                 </div>

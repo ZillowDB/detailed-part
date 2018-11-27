@@ -101,7 +101,7 @@ class App extends React.Component {
                     <section className= "main-col zlw-lg-2-3 zlw-sm-2-2">
                       <div className= {this.state.shrinkSection ? 'section-shrink': ''}>
                         <DetailHead 
-                          data = {this.state.data} 
+                          homeInfo = {this.state.data} 
                           handleClick = {this.showCal}
                           isCal = {this.state.isCal}/>
                         <div className="main-contents">
@@ -114,7 +114,7 @@ class App extends React.Component {
                             <div className="more-less" onClick={this.bodyShrinker}>Less <i className="fas fa-angle-up"></i></div>
                           }
                         </div>
-                        <FollowingContents data = {this.state.data}/>
+                        <FollowingContents homeInfo = {this.state.data}/>
                       </div>
                       {
                         this.state.shrinkSection ? 
@@ -126,7 +126,7 @@ class App extends React.Component {
                       }
                     </section>
                     <section className="side-bar zlw-sm-0-2 zlw-lg-1-3">
-                      <Aside data = {this.state.data}/>
+                      <Aside homeInfo = {this.state.data}/>
                     </section>
                   </div>
               }

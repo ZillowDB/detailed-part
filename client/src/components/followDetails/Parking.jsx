@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Parking = ({data}) => (
+const Parking = ({parkingInfo}) => (
 	<div>
 		<div className="detail-title">
             parking
@@ -11,7 +11,7 @@ const Parking = ({data}) => (
                     <div className="module-text">
                         <div className="body">
                             <span className="detail-module-title">Parking: </span>
-                            {data.parkinglong}
+                            {parkingInfo}
                         </div>
                     </div>
                 </div>

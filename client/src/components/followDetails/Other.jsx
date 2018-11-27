@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const Other = ({data}) => (
+const Other = (props) => (
 	<div>
 		<div className="detail-title">
         Other
@@ -12,11 +12,11 @@ const Other = ({data}) => (
                 <div className="module-text">
                     <div className="body">
                         <span className="detail-module-title">Last sold: </span>
-                        {moment(data.solddate).fromNow()}
+                        {moment(props.date).fromNow()}
                     </div>
                     <div className="body">
                         <span className="detail-module-title">Price/sqft: </span>
-                        {data.soldprice.toLocaleString()}
+                        {props.price.toLocaleString()}
                     </div>
                 </div>
             </div>
