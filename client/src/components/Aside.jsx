@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Modal from './Modal.jsx';
-import axios from 'axios';
-
 
 class Aside extends React.Component {
 	constructor(props) {

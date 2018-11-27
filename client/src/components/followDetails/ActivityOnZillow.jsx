@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 
-const ActivityOnZillow = (props) => (
-	<div>
-		<div className="detail-title">
+const ActivityOnZillow = props => (
+    <div>
+    <div className="detail-title">
         Activity On Zillow
     </div>
     <div className="body">
@@ -25,7 +25,7 @@ const ActivityOnZillow = (props) => (
             </div>
         </div>
     </div>
-	</div>
-)
+    </div>
+);
 
 export default ActivityOnZillow;

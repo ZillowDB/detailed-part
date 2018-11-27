@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 
-const Construction = ({constructionInfo}) => (
-	<div>
-		<div className="detail-title">
+const Construction = ({ constructionInfo }) => (
+    <div>
+    <div className="detail-title">
         construction
     </div>
     <div className="body">
@@ -53,7 +53,7 @@ const Construction = ({constructionInfo}) => (
             </div>
         </div>
     </div>
-	</div>
-)
+    </div>
+);
 
 export default Construction;

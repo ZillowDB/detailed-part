@@ -9,8 +9,7 @@ const detail = require('./routes/detail.js');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use('/homes/:home', express.static(path.join(__dirname, '/../client/dist/')));
-app.use('/addresses/:address', express.static(path.join(__dirname, '/../client/dist/')));
+app.use(['/homes/:home', '/addresses/:address'], express.static(path.join(__dirname, '/../client/dist/')));
 app.use('/api', detail);
 
 const port = process.env.PORT || 8080;
