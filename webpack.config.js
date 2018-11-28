@@ -1,4 +1,6 @@
 var path = require('path');
+var webpack = require('webpack');
+var CompressionPlugin = require('compression-webpack-plugin');
 var SRC_DIR = path.join(__dirname, '/client/src');
 var DIST_DIR = path.join(__dirname, '/client/dist');
 
@@ -23,5 +25,14 @@ module.exports = {
         loader: "style-loader!css-loader" 
       },
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({ // <-- key to reducing React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
+  ],
 };

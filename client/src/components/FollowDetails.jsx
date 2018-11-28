@@ -8,41 +8,41 @@ import Other from './followDetails/Other.jsx';
 import ActivityOnZillow from './followDetails/ActivityOnZillow.jsx';
 
 
-const FollowDetails = ({details}) => (
+const FollowDetails = ({homeInfo}) => (
 		<div>
 			<div className="follow-details">
 	        <div className="details">
-	        	<InteriorFeatures data = {details.interiorFeatures}/>
+	        	<InteriorFeatures interiorInfo = {homeInfo}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<SpaceAndAmenities data = {details.spacesAndMenities}/>
+	        	<SpaceAndAmenities  size = {homeInfo.size} amenities = {homeInfo.amenities} spaces = {homeInfo.spaces} />
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<Construction data = {details.construction}/>
+	        	<Construction constructionInfo = {homeInfo}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<ExteriorFeatures data = {details.exteriorFeatures}/>
+	        	<ExteriorFeatures lot = {homeInfo.exteriorlot} lotwidth = {homeInfo.lotwidth} otherext = {homeInfo.otherexterior} />
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<Parking data = {details.parking}/>
+	        	<Parking parkingInfo = {homeInfo.parkinglong}/>
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<Other data = {details.other}/>
+	        	<Other date = {homeInfo.solddate} price = {homeInfo.soldprice} />
 	        	</div>
 	    </div>
 	    <div className="follow-details">
 	        <div className="details">
-	        	<ActivityOnZillow data = {details.activityOnZillow}/>
+	        	<ActivityOnZillow days = {homeInfo.daysonzillow} pastthirty = {homeInfo.pastthirtydayview} savedlog = {homeInfo.savedlog} />
 	        </div>
 	    </div>
     </div>

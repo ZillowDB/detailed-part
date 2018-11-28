@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ExteriorFeatures = ({data}) => (
+const ExteriorFeatures = (props) => (
 	<div>
 		<div className="detail-title">
-            exterior features
+            Exterior Features
         </div>
         <div className="body">
             <div className="details module-group">
@@ -11,12 +11,12 @@ const ExteriorFeatures = ({data}) => (
                     <div className="module-text">
                         <div className="label">Lot</div>
                         <div className="body">
-                            <span className="detail-module-title">lot: </span>
-                            {data.lot.lot}
+                            <span className="detail-module-title">Lot: </span>
+                            {props.lot}
                         </div>
                         <div className="body">
                             <span className="detail-module-title">Lot Width: </span>
-                            {data.lot.lotWidth}
+                            {props.lotwidth}
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const ExteriorFeatures = ({data}) => (
                         <div className="label">Other Exterior Features</div>
                         <div className="body">
                             <span className="detail-module-title">Parcel #: </span>
-                            {data.other}
+                            {props.otherexterior}
                         </div>
                     </div>
                 </div>

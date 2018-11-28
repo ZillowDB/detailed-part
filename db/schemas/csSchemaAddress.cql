@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS detail;
+DROP TABLE IF EXISTS detailaddress;
 
-CREATE TABLE detail (
+CREATE TABLE detailaddress (
   id int,
-  address varchar,
+  address varchar PRIMARY KEY,
   price int,
   body text,
   subTitle varchar,
@@ -37,6 +37,5 @@ CREATE TABLE detail (
   soldDate varchar,
   soldPrice int,
   pastThirtydayView tinyint,
-  savedLog tinyint,
-  PRIMARY KEY (id)
+  savedLog tinyint
 );

@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Modal from './Modal.jsx';
-import axios from 'axios';
-
 
 class Aside extends React.Component {
 	constructor(props) {
@@ -70,22 +67,9 @@ class Aside extends React.Component {
 
 	sendBuyerInfo(e){
 		e.preventDefault();
-		let data = {
-			name: this.state.name,
-			phone: this.state.phone,
-			mail: this.state.mail,
-			timeStamp: this.getNow(Date(Date.now()))
-		}
-		if(!this.state.nameBool || !this.state.phoneBool || !this.state.mailBool){
-			alert('Wrong Format!')
-		} else {
-			//todo get home id from window.location
-			axios.post('/userRequest/homes/1', {data})
-				.then(res => {
-					this.sendReqOkData(res.data);
-				})
-		}
+		alert('Must be logged in!');
 	}
+	
 	closeHandler(){
 		this.setState({
 			sendReqOk: false,
@@ -99,7 +83,7 @@ class Aside extends React.Component {
 		})
 	}
 	render(){
-		const defaultText = `I am interested in ${this.props.data.address}.`
+		const defaultText = `I am interested in ${this.props.homeInfo.address}.`
 		const starWidth = {
 			width: `${this.state.starpercent}%`
 		}

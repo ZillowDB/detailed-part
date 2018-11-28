@@ -1,7 +1,12 @@
+require('dotenv').config();
 const express = require('express');
+const cassandra = require('cassandra-driver');
 
+const client = new cassandra.Client({ contactPoints: [process.env.CP], keyspace: process.env.KEY });
 const router = express.Router();
-const Detail = require('../../db/detail.js');
+
+const idQuery = 'SELECT * FROM detailid WHERE id=?';
+const mvQuery = 'SELECT * FROM id_mv WHERE address=?';
 
 // get detail info for all houses
 router.get('/homes', (req, res) => {
@@ -11,8 +16,17 @@ router.get('/homes', (req, res) => {
 });
 
 // get detail info for one house
-router.get('/homes/:home', (req, res) => {
-  Detail.findOne({ _index: req.params.home })
+router.get('/homes/:home/details', (req, res) => {
+  const home = Number(req.params.home);
+  client.execute(idQuery, [home], { prepare: true })
+    .then(data => res.status(200).send(data))
+    .catch(error => res.status(500).send(error));
+});
+
+// get detail info for one address
+router.get('/addresses/:address/details', (req, res) => {
+  const address = req.params.address.replace(/-/g, ' ');
+  client.execute(mvQuery, [address], { prepare: true })
     .then(data => res.status(200).send(data))
     .catch(error => res.status(500).send(error));
 });

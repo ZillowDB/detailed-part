@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS detail;
+DROP TABLE IF EXISTS detailid;
 
-CREATE TABLE detail (
-  _index SERIAL NOT NULL PRIMARY KEY,
-  address VARCHAR CONSTRAINT unq_address UNIQUE,
+CREATE TABLE detailid (
+  id SERIAL NOT NULL PRIMARY KEY,
+  address VARCHAR NOT NULL,
   price INT NOT NULL,
   body TEXT NOT NULL,
   subTitle VARCHAR NOT NULL,
@@ -11,17 +11,17 @@ CREATE TABLE detail (
   heating VARCHAR NOT NULL,
   cooling VARCHAR NOT NULL,
   parking VARCHAR NOT NULL,
-  lot INT NOT NULL,
+  lot SMALLINT NOT NULL,
   daysOnZillow VARCHAR NOT NULL,
-  pricePerSqft INT NOT NULL,
-  saves INT NOT NULL,
-  bedRoom INT NOT NULL,
+  pricePerSqft SMALLINT NOT NULL,
+  saves SMALLINT NOT NULL,
+  bedRoom SMALLINT NOT NULL,
   bathRoom VARCHAR NOT NULL,
   heatingAndCooling VARCHAR NOT NULL,
   basement VARCHAR NOT NULL,
-  flooring INT NOT NULL,
+  flooring SMALLINT NOT NULL,
   otherInterior VARCHAR NOT NULL,
-  size INT NOT NULL,
+  size SMALLINT NOT NULL,
   amenities VARCHAR NOT NULL,
   spaces VARCHAR NOT NULL,
   typeAndStyle VARCHAR NOT NULL,
@@ -30,12 +30,12 @@ CREATE TABLE detail (
   roof VARCHAR NOT NULL,
   exterior VARCHAR NOT NULL,
   otherConstruction VARCHAR NOT NULL,
-  exteriorLot INT NOT NULL,
-  lotWidth INT NOT NULL,
+  exteriorLot SMALLINT NOT NULL,
+  lotWidth SMALLINT NOT NULL,
   otherExterior VARCHAR NOT NULL,
   parkingLong VARCHAR NOT NULL,
   soldDate VARCHAR NOT NULL,
   soldPrice INT NOT NULL,
-  pastThirtydayView INT NOT NULL,
-  savedLog INT NOT NULL
+  pastThirtydayView SMALLINT NOT NULL,
+  savedLog SMALLINT NOT NULL
 );

@@ -25,8 +25,12 @@ class App extends React.Component {
 	}
 
   componentDidMount(){
-    let idx = Math.floor(Math.random() * (101 - 1)) + 1;
-    this.getOne(idx);
+    let idx = window.location.pathname.split('/')[2];
+    if (idx.includes('-')){
+      this.getByAddress(idx);
+    } else {
+      this.getById(idx);
+    }
   }
 
   showCal(){
@@ -61,14 +65,24 @@ class App extends React.Component {
     })
   }
 
-  getOne(index){
-    fetch(`/detail/homes/${index}`)
+  getById(index){
+    fetch(`/api/homes/${index}/details`)
       .then(res => res.json())
       .then(json => {
         this.setState({
-          data: json
-        })
-      })
+          data: json.rows[0]
+        });
+      });
+  }
+
+  getByAddress(address){
+    fetch(`/api/addresses/${address}/details`)
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+          data: json.rows[0]
+        });
+      }); 
   }
 
   render(){
@@ -87,7 +101,7 @@ class App extends React.Component {
                     <section className= "main-col zlw-lg-2-3 zlw-sm-2-2">
                       <div className= {this.state.shrinkSection ? 'section-shrink': ''}>
                         <DetailHead 
-                          data = {this.state.data} 
+                          homeInfo = {this.state.data} 
                           handleClick = {this.showCal}
                           isCal = {this.state.isCal}/>
                         <div className="main-contents">
@@ -100,7 +114,7 @@ class App extends React.Component {
                             <div className="more-less" onClick={this.bodyShrinker}>Less <i className="fas fa-angle-up"></i></div>
                           }
                         </div>
-                        <FollowingContents data = {this.state.data}/>
+                        <FollowingContents homeInfo = {this.state.data}/>
                       </div>
                       {
                         this.state.shrinkSection ? 
@@ -112,7 +126,7 @@ class App extends React.Component {
                       }
                     </section>
                     <section className="side-bar zlw-sm-0-2 zlw-lg-1-3">
-                      <Aside data = {this.state.data}/>
+                      <Aside homeInfo = {this.state.data}/>
                     </section>
                   </div>
               }
